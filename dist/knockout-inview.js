@@ -78,14 +78,14 @@ var removeListener = function removeListener(element) {
     });
 
     if (listener[0]) {
-      window.removeEventListener("scroll", listener[0].listener);
+      window.removeEventListener("scroll", listener[0].listener, true);
     }
   };
 };
 
 var bindListener = function bindListener(element, listener) {
 
-  window.addEventListener("scroll", listener);
+  window.addEventListener("scroll", listener, true);
 
   listeners.push({ element: element, listener: listener });
 
